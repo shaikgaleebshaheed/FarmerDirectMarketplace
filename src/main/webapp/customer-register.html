@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Registration</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                    linear-gradient(
+                            135deg,
+                            #e8f5e9,
+                            #c8e6c9
+                    );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 420px;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                    0 10px 30px
+                    rgba(0, 0, 0, 0.12);
+        }
+
+        .icon {
+            text-align: center;
+            font-size: 55px;
+        }
+
+        h1 {
+            text-align: center;
+
+            color: #2e7d32;
+
+            margin: 10px 0;
+
+            font-size: 30px;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            color: #777;
+
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+
+            margin-top: 15px;
+            margin-bottom: 7px;
+
+            color: #333;
+
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #43a047;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 25px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #43a047;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2e7d32;
+        }
+
+        .link {
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #666;
+        }
+
+        .link a {
+            color: #2e7d32;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="icon">
+        🛒
+    </div>
+
+    <h1>
+        Customer Registration
+    </h1>
+
+    <p class="subtitle">
+        Create your customer account
+    </p>
+
+    <form action="register" method="post">
+
+        <input
+                type="hidden"
+                name="role"
+                value="customer">
+
+        <label>
+            Full Name
+        </label>
+
+        <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required>
+
+        <label>
+            Email
+        </label>
+
+        <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+
+        <label>
+            Password
+        </label>
+
+        <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required>
+
+        <button type="submit">
+            Register as Customer
+        </button>
+
+    </form>
+
+    <div class="link">
+
+        Already have an account?
+
+        <a href="customer-login.html">
+            Login
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Direct Marketplace</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            background-image:
+                    url("farmer-background.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+        /* HEADER */
+
+        header {
+
+            height: 70px;
+
+            background: rgba(27, 94, 32, 0.95);
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 55px;
+
+            color: white;
+
+            box-shadow:
+                    0 3px 12px
+                    rgba(0, 0, 0, 0.18);
+
+        }
+
+        .logo {
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            letter-spacing: 0.5px;
+
+        }
+
+        /* MAIN */
+
+        .main {
+
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 50px 20px;
+
+        }
+
+        .heading {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+        .heading h1 {
+
+            color: #1b5e20;
+
+            font-size: 46px;
+
+            margin-bottom: 10px;
+
+            text-shadow:
+                    0 2px 5px
+                    rgba(255, 255, 255, 0.8);
+
+        }
+
+        .heading p {
+
+            color: #333;
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+        }
+
+        /* CARDS */
+
+        .cards {
+
+            display: flex;
+
+            gap: 30px;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+        }
+
+        .card {
+
+            width: 340px;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            padding: 35px 30px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                    0 12px 30px
+                    rgba(0, 0, 0, 0.20);
+
+            transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+
+        }
+
+        .card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                    0 18px 35px
+                    rgba(0, 0, 0, 0.25);
+
+        }
+
+        .icon {
+
+            font-size: 70px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .card h2 {
+
+            color: #2e7d32;
+
+            font-size: 28px;
+
+            margin-bottom: 12px;
+
+        }
+
+        .card p {
+
+            color: #555;
+
+            line-height: 1.6;
+
+            min-height: 52px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .button {
+
+            display: inline-block;
+
+            width: 100%;
+
+            padding: 14px;
+
+            background: #43a047;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            transition:
+                    background 0.3s ease,
+                    transform 0.2s ease;
+
+        }
+
+        .button:hover {
+
+            background: #2e7d32;
+
+            transform: scale(1.02);
+
+        }
+
+        /* FOOTER */
+
+        footer {
+
+            background: rgba(27, 94, 32, 0.95);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 12px;
+
+            font-size: 13px;
+
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 750px) {
+
+            header {
+
+                justify-content: center;
+
+                padding: 0 20px;
+
+            }
+
+            .heading h1 {
+
+                font-size: 34px;
+
+            }
+
+            .heading p {
+
+                font-size: 16px;
+
+            }
+
+            .card {
+
+                width: 90%;
+
+                max-width: 340px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        🌾 Farmer Direct
+    </div>
+
+</header>
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+
+    <div class="heading">
+
+        <h1>
+            Farmer Direct Marketplace
+        </h1>
+
+        <p>
+            Connecting farmers and customers directly 🌿
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- FARMER -->
+
+        <div class="card">
+
+            <div class="icon">
+                👩‍🌾
+            </div>
+
+            <h2>
+                Farmer
+            </h2>
+
+            <p>
+                Sell your fresh agricultural
+                products directly to customers.
+            </p>
+
+            <a
+                    href="farmer.html"
+                    class="button">
+
+                🌱 Continue as Farmer →
+
+            </a>
+
+        </div>
+
+
+        <!-- CUSTOMER -->
+
+        <div class="card">
+
+            <div class="icon">
+                🛒
+            </div>
+
+            <h2>
+                Customer
+            </h2>
+
+            <p>
+                Discover fresh products from
+                farmers and place your orders.
+            </p>
+
+            <a
+                    href="customer.html"
+                    class="button">
+
+                🛒 Continue as Customer →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Farmer Direct Marketplace
+    | Fresh Farms, Brighter Tomorrows 🌱
+
+</footer>
+
+
+</body>
+
+</html>

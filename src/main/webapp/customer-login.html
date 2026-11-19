@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Login</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                    linear-gradient(
+                            135deg,
+                            #e8f5e9,
+                            #c8e6c9
+                    );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 420px;
+
+            background: white;
+
+            padding: 45px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                    0 10px 30px
+                    rgba(0, 0, 0, 0.12);
+        }
+
+        .icon {
+            text-align: center;
+            font-size: 60px;
+        }
+
+        h1 {
+            text-align: center;
+
+            color: #2e7d32;
+
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            color: #777;
+
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+
+            margin-top: 15px;
+            margin-bottom: 7px;
+
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #43a047;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 25px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #43a047;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2e7d32;
+        }
+
+        .link {
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #666;
+        }
+
+        .link a {
+            color: #2e7d32;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="icon">
+        🛒
+    </div>
+
+    <h1>
+        Customer Login
+    </h1>
+
+    <p class="subtitle">
+        Login to discover fresh products
+    </p>
+
+    <form action="login" method="post">
+
+        <input
+                type="hidden"
+                name="role"
+                value="customer">
+
+        <label>
+            Email
+        </label>
+
+        <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+
+        <label>
+            Password
+        </label>
+
+        <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required>
+
+        <button type="submit">
+            Login as Customer
+        </button>
+
+    </form>
+
+    <div class="link">
+
+        New customer?
+
+        <a href="customer-register.html">
+            Register
+        </a>
+    </div>
+
+</div>
+
+</body>
+
+</html>

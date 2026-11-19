@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Direct Marketplace</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            background: linear-gradient(
+                    135deg,
+                    #e8f5e9,
+                    #c8e6c9
+            );
+        }
+
+        nav {
+
+            background: #2e7d32;
+
+            padding: 18px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .logo {
+
+            color: white;
+
+            font-size: 24px;
+
+            font-weight: bold;
+        }
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            font-weight: bold;
+        }
+
+        nav a:hover {
+
+            text-decoration: underline;
+        }
+
+        .hero {
+
+            text-align: center;
+
+            padding: 90px 20px 60px;
+        }
+
+        .hero h1 {
+
+            color: #2e7d32;
+
+            font-size: 48px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+
+            color: #555;
+
+            font-size: 20px;
+
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .button {
+
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            font-size: 16px;
+        }
+
+        .primary {
+
+            background: #43a047;
+
+            color: white;
+        }
+
+        .primary:hover {
+
+            background: #2e7d32;
+        }
+
+        .secondary {
+
+            background: white;
+
+            color: #2e7d32;
+
+            border: 2px solid #43a047;
+        }
+
+        .secondary:hover {
+
+            background: #e8f5e9;
+        }
+
+        .features {
+
+            width: 90%;
+
+            max-width: 1000px;
+
+            margin: 30px auto 60px;
+
+            display: grid;
+
+            grid-template-columns:
+                    repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 25px;
+        }
+
+        .card {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow:
+                    0 5px 15px
+                    rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+
+            color: #2e7d32;
+
+            margin-bottom: 10px;
+        }
+
+        .card p {
+
+            color: #666;
+
+            line-height: 1.5;
+        }
+
+        .hidden {
+
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        🌾 Farmer Direct
+    </div>
+
+    <div>
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="products">
+            Products
+        </a>
+
+        <!-- Farmer option -->
+        <a href="add-product.html"
+           id="farmerAddProduct">
+            Add Product
+        </a>
+
+        <!-- Customer option -->
+        <a href="orders"
+           id="customerOrders">
+            My Orders
+        </a>
+
+        <a href="logout">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<section class="hero">
+
+    <h1>
+        🌾 Farmer Direct Marketplace
+    </h1>
+
+    <p>
+        Buy fresh products directly from farmers
+    </p>
+
+    <div class="buttons">
+
+        <a href="products"
+           class="button primary">
+
+            🛒 View Products
+
+        </a>
+
+
+        <!-- Farmer button -->
+
+        <a href="add-product.html"
+           id="farmerAddButton"
+           class="button secondary">
+
+            🌱 Add Product
+
+        </a>
+
+
+        <!-- Customer button -->
+
+        <a href="orders"
+           id="customerOrdersButton"
+           class="button secondary">
+
+            📦 My Orders
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div class="card">
+
+        <div class="card-icon">
+            🌱
+        </div>
+
+        <h2>
+            Fresh Products
+        </h2>
+
+        <p>
+            Get fresh agricultural products
+            directly from local farmers.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🤝
+        </div>
+
+        <h2>
+            Direct Connection
+        </h2>
+
+        <p>
+            Connect farmers and customers
+            without unnecessary middlemen.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            📦
+        </div>
+
+        <h2>
+            Easy Ordering
+        </h2>
+
+        <p>
+            Browse products, place orders
+            and track your orders easily.
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+    /*
+     * Get role from URL
+     */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const role =
+        params.get("role");
+
+
+    /*
+     * Get elements
+     */
+
+    const farmerAddProduct =
+        document.getElementById(
+            "farmerAddProduct"
+        );
+
+    const customerOrders =
+        document.getElementById(
+            "customerOrders"
+        );
+
+    const farmerAddButton =
+        document.getElementById(
+            "farmerAddButton"
+        );
+
+    const customerOrdersButton =
+        document.getElementById(
+            "customerOrdersButton"
+        );
+
+
+    /*
+     * Farmer
+     */
+
+    if (role === "farmer") {
+
+        farmerAddProduct.classList.remove(
+            "hidden"
+        );
+
+        farmerAddButton.classList.remove(
+            "hidden"
+        );
+
+        customerOrders.classList.add(
+            "hidden"
+        );
+
+        customerOrdersButton.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    /*
+     * Customer
+     */
+
+    else if (role === "customer") {
+
+        customerOrders.classList.remove(
+            "hidden"
+        );
+
+        customerOrdersButton.classList.remove(
+            "hidden"
+        );
+
+        farmerAddProduct.classList.add(
+            "hidden"
+        );
+
+        farmerAddButton.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    /*
+     * If no role is present
+     */
+
+    else {
+
+        farmerAddProduct.classList.add(
+            "hidden"
+        );
+
+        farmerAddButton.classList.add(
+            "hidden"
+        );
+
+        customerOrders.classList.add(
+            "hidden"
+        );
+
+        customerOrdersButton.classList.add(
+            "hidden"
+        );
+
+    }
+
+</script>
+
+</body>
+
+</html>

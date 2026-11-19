@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Dashboard - Farmer Direct</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+        }
+
+        nav {
+            height: 70px;
+            background: #2e7d32;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 50px;
+
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 60px auto;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .heading .icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .heading h1 {
+            color: #2e7d32;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                    0 10px 25px rgba(0, 0, 0, 0.12);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            color: #2e7d32;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            background: #43a047;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #2e7d32;
+        }
+
+        .logout {
+            background: #c62828;
+        }
+
+        .logout:hover {
+            background: #b71c1c;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        🌾 Farmer Direct
+    </div>
+
+    <div class="nav-links">
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="products">
+            All Products
+        </a>
+
+        <a href="add-product.html">
+            Add Product
+        </a>
+
+        <a href="logout">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="heading">
+
+        <div class="icon">
+            👩‍🌾
+        </div>
+
+        <h1>
+            Farmer Dashboard
+        </h1>
+
+        <p>
+            Manage your products and view available products
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- Add Products -->
+
+        <div class="card">
+
+            <div class="icon">
+                ➕
+            </div>
+
+            <h2>
+                Add Products
+            </h2>
+
+            <p>
+                Add your fresh agricultural products
+                and sell them directly to customers.
+            </p>
+
+            <a
+                    href="add-product.html"
+                    class="button">
+
+                Add Product
+
+            </a>
+
+        </div>
+
+
+        <!-- All Products -->
+
+        <div class="card">
+
+            <div class="icon">
+                🌾
+            </div>
+
+            <h2>
+                All Products
+            </h2>
+
+            <p>
+                View all agricultural products
+                available in the marketplace.
+            </p>
+
+            <a
+                    href="products"
+                    class="button">
+
+                View Products
+
+            </a>
+
+        </div>
+
+
+        <!-- Logout -->
+
+        <div class="card">
+
+            <div class="icon">
+                🚪
+            </div>
+
+            <h2>
+                Logout
+            </h2>
+
+            <p>
+                Logout from your farmer account
+                safely and securely.
+            </p>
+
+            <a
+                    href="logout"
+                    class="button logout">
+
+                Logout
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

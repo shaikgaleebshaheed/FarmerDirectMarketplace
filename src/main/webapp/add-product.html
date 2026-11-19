@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Product - Farmer Direct Marketplace</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            background: linear-gradient(
+                    135deg,
+                    #e8f5e9,
+                    #c8e6c9
+            );
+        }
+
+        nav {
+
+            background: #2e7d32;
+
+            padding: 18px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .logo {
+
+            color: white;
+
+            font-size: 24px;
+
+            font-weight: bold;
+        }
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            font-weight: bold;
+        }
+
+        nav a:hover {
+
+            text-decoration: underline;
+        }
+
+        .container {
+
+            width: 90%;
+
+            max-width: 600px;
+
+            margin: 50px auto;
+        }
+
+        .card {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                    0 8px 25px
+                    rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+
+            text-align: center;
+
+            color: #2e7d32;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+
+            text-align: center;
+
+            color: #666;
+
+            margin-bottom: 30px;
+        }
+
+        label {
+
+            display: block;
+
+            color: #2e7d32;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+            margin-top: 18px;
+        }
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+        }
+
+        textarea {
+
+            resize: vertical;
+
+            min-height: 100px;
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 25px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #43a047;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            background: #2e7d32;
+        }
+
+        .back {
+
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #2e7d32;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .back:hover {
+
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        🌾 Farmer Direct
+    </div>
+
+    <div>
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="products">
+            Products
+        </a>
+
+        <a href="add-product.html">
+            Add Product
+        </a>
+
+        <a href="logout">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>
+            🌱 Add Product
+        </h1>
+
+        <p class="subtitle">
+            Add your agricultural product
+        </p>
+
+        <form action="add-product" method="post">
+
+            <label>
+                Product Name
+            </label>
+
+            <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter product name"
+                    required>
+
+
+            <label>
+                Category
+            </label>
+
+            <select name="category" required>
+
+                <option value="">
+                    Select Category
+                </option>
+
+                <option value="Vegetables">
+                    Vegetables
+                </option>
+
+                <option value="Fruits">
+                    Fruits
+                </option>
+
+                <option value="Grains">
+                    Grains
+                </option>
+
+                <option value="Pulses">
+                    Pulses
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label>
+                Price
+            </label>
+
+            <input
+                    type="number"
+                    name="price"
+                    step="0.01"
+                    placeholder="Enter price"
+                    required>
+
+
+            <label>
+                Quantity
+            </label>
+
+            <input
+                    type="number"
+                    name="quantity"
+                    min="1"
+                    placeholder="Enter quantity"
+                    required>
+
+
+            <label>
+                Description
+            </label>
+
+            <textarea
+                    name="description"
+                    placeholder="Enter product description"></textarea>
+
+
+            <button type="submit">
+                🌱 Add Product
+            </button>
+
+        </form>
+
+        <a href="products" class="back">
+            ← View Products
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

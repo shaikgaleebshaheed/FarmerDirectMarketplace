@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Login - Farmer Direct</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                    linear-gradient(
+                            135deg,
+                            #e8f5e9,
+                            #c8e6c9
+                    );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 400px;
+            max-width: 90%;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                    0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            text-align: center;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #333;
+
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 12px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+
+            border-color: #43a047;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #43a047;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2e7d32;
+        }
+
+        .register {
+            text-align: center;
+
+            margin-top: 22px;
+
+            color: #666;
+        }
+
+        .register a {
+            color: #2e7d32;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .back {
+            text-align: center;
+
+            margin-top: 15px;
+        }
+
+        .back a {
+            color: #777;
+
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="icon">
+        🧑‍🌾
+    </div>
+
+    <h1>
+        Farmer Login
+    </h1>
+
+    <p class="subtitle">
+        Login to manage your products
+    </p>
+
+    <form action="login" method="post">
+
+        <input type="hidden"
+               name="role"
+               value="farmer">
+
+        <label>
+            Email
+        </label>
+
+        <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+        >
+
+        <label>
+            Password
+        </label>
+
+        <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+        >
+
+        <button type="submit">
+            Login as Farmer
+        </button>
+
+    </form>
+
+    <div class="register">
+
+        Don't have a farmer account?
+
+        <a href="farmer-register.html">
+            Register
+        </a>
+
+    </div>
+
+    <div class="back">
+
+        <a href="farmer.html">
+            ← Back to Role Selection
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
